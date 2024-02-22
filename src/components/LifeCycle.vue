@@ -1,26 +1,23 @@
 <template>
-    <h1>Meu nome é:{{ nome }}</h1>
-</template>
-
-<script>
-export default{
-    name:'LifeCycle',
-    data(){
-        return{
-            nome:"Ainda não sei"
-        }
+    <h1>Meu nome é {{ nome }}</h1>
+    <Info />
+  </template>
+  
+  <script>
+  import Info from './Info.vue'
+  
+  export default {
+    name: 'LifeCycle',
+    components: {
+      Info
     },
-    created()
-    {
-        setTimeout(() => {
-            this.nome = "Idail Neto";
-        },2000);
+    data() {
+      return { 
+        nome: "Ainda não sei"
+      }
     },
-    mounted()
-    {
-        setTimeout(() => {
-                this.nome = "Campo Grande";
-        }, 1000);
+    created() {
+      this.nome = "Matheus"
     }
-}
-</script>
+  }
+  </script>

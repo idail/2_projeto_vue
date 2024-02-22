@@ -1,18 +1,23 @@
 <template>
-    <div>
-        <h1>Olá Vue</h1>
-        <p>Meu nome é {{ nome }} e trabalho como {{ profissao }}</p>
-    </div>
-</template>
-
-<script>
-export default {
-    name: "PrimeiroComponente",
+    <h1>Meu nome é {{ nome }}</h1>
+    <Info />
+  </template>
+  
+  <script>
+  import Info from './Info.vue'
+  
+  export default {
+    name: 'LifeCycle',
+    components: {
+      Info
+    },
     data() {
-        return {
-            nome: "Idail",
-            profissao:"programador"
-        }
+      return { 
+        nome: "Ainda não sei"
+      }
+    },
+    created() {
+      this.nome = "Matheus"
     }
-}
-</script>
+  }
+  </script>

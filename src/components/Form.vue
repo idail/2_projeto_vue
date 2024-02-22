@@ -1,13 +1,26 @@
 <template>
+    <h2>Meu formulario:</h2>
     <form action="">
-        <input type="text" name="" id="">
-        <input type="text" name="" id="">
-        <input type="submit" value="">
+        <div>
+            <InputText />
+        </div>
+        <div>
+            <InputText />
+        </div>
+        <div>
+            <Submit />
+        </div>
     </form>
 </template>
 
-<script lang="ts">
-export default{
-    name:"form"
+<script>
+import InputText from './form/InputText.vue';
+import Submit from './form/Submit.vue';
+export default {
+    name: "Form",
+    components: {
+        InputText,
+        Submit
+    }
 }
 </script>
